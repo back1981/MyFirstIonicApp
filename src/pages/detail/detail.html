@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Detail
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngIf="note != undefined">
+    <ion-card-title>{{note.name}}</ion-card-title>
+
+    <!-- <ion-card-header>
+            
+        </ion-card-header> -->
+    <ion-card-content>
+      {{note.content}}
+    </ion-card-content>
+    <ion-item *ngFor="let image of note.images">
+      <img src="{{image}}" />
+    </ion-item>
+  </ion-card>
+</ion-content>
